@@ -1,0 +1,1 @@
+export const BASE_URL =  "https://api1.aarawan.com/api/";
