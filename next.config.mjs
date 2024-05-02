@@ -6,6 +6,7 @@ const nextConfig = {
         unoptimized: true,
         domains: ['api1.aarawan.com'],
     },
+    assetPrefix: "/"
 }
 
 export default nextConfig;
