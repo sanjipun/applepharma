@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 import Testimonial from '@/app/Home/Testimonials';
 import { getProductDetailsWithId, getProductsData } from '@/services/api/product-api';
 import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+import Image1 from '../../../public/img/medicineImg.jpg';
 
 const ProductDetails = (props) => {
     const { takeName} = props;
@@ -77,7 +79,13 @@ const ProductDetails = (props) => {
                 <div className='productDetails'>
 
                     <div className="news-head new-head-extra single-image">
-                        <img src={productDetails?.photo} alt="#" />
+                        {/* <img src={productDetails?.photo} alt="#" /> */}
+                        <Image 
+                            height={1000}
+                            width={1000}
+                            src={productDetails?.photo ? productDetails?.photo : Image1}
+                            alt='product image'
+                        />
                     </div>
                     <div className='productDetails-text'>
                         <ul className="nav nav-tabs mb-3" id="pills-tab" role="tablist">

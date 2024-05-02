@@ -17,7 +17,7 @@ const FlippingTextComponent = ({ texts, intervalTime }) => {
   }, [textIndex, texts.length, intervalTime]);
 
   return (
-    <div className="flipping-text-inner">
+    <div className="flipping-text-inner ">
       {showText && (
         <span className={showText ? 'slide-up-enter' : ''}>
           {texts[textIndex]}

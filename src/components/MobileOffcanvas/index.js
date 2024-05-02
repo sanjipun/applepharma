@@ -9,21 +9,27 @@ import { links1 } from "../Header/Navbar/productsArray";
 
 import Logo from "../../../public/img/logo.png";
 import { getProductsCategory } from "@/services/api/product-api";
+import { getDepartment, getTeamMembers } from "@/services/api/about-api";
 
 export default function MobileOffcanvas() {
   const pathname = usePathname();
 
   const [show, setShow] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [openSubMenu1, setOpenSubMenu1] = useState(null);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [productCateroy, setProductCateroy] = useState({});
+  const [department, setDepartment] = useState({});
 
   // Function to toggle the sub-menu
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
   };
+  const toggleSubMenu1 = (index) => {
+    setOpenSubMenu1(openSubMenu1 === index ? null : index);
+  }
 
   // Function to check if a menu item is active
   const isActive = (path) => pathname === path;
@@ -32,7 +38,11 @@ export default function MobileOffcanvas() {
     getProductsCategory().then((data) => {
       setProductCateroy(data);
     });
-  }, []); 
+    getDepartment().then((data) => {
+      // console.log(data);
+      setDepartment(data);
+    });
+  }, []);
 
   return (
     <>
@@ -148,120 +158,6 @@ export default function MobileOffcanvas() {
                       Gallery
                     </Link>
                   </li>
-
-                  {/* <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={() => toggleSubMenu(4)}
-                      href="#"
-                    >
-                      Pages <i className="icofont-rounded-down"></i>
-                    </Link>
-                    <ul
-                      className={`sub-menu ${openSubMenu === 4 ? "open" : ""}`}
-                    >
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${isActive("/about") ? "active" : ""}`}
-                          href="/about"
-                        >
-                          About Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${
-                            isActive("/appointment") ? "active" : ""
-                          }`}
-                          href="/appointment"
-                        >
-                          Appointment
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${
-                            isActive("/time-table") ? "active" : ""
-                          }`}
-                          href="/time-table"
-                        >
-                          Time Table
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${
-                            isActive("/testimonials") ? "active" : ""
-                          }`}
-                          href="/testimonials"
-                        >
-                          Testimonials
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${isActive("/pricing") ? "active" : ""}`}
-                          href="/pricing"
-                        >
-                          Our Pricing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${
-                            isActive("/register") ? "active" : ""
-                          }`}
-                          href="/register"
-                        >
-                          Sign Up
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${isActive("/login") ? "active" : ""}`}
-                          href="/login"
-                        >
-                          Login
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${isActive("/faq") ? "active" : ""}`}
-                          href="/faq"
-                        >
-                          Faq
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${
-                            isActive("/mail-success") ? "active" : ""
-                          }`}
-                          href="/mail-success"
-                        >
-                          Mail Success
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          onClick={handleClose}
-                          className={` ${isActive("/404") ? "active" : ""}`}
-                          href="/404"
-                        >
-                          404 Error
-                        </Link>
-                      </li>
-                    </ul>
-                  </li> */}
                   <li>
                     <Link
                       className="menu-arrow"
@@ -288,6 +184,53 @@ export default function MobileOffcanvas() {
                     >
                       Careers
                     </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="menu-arrow"
+                      onClick={() => toggleSubMenu(6)}
+                      href="#"
+                    >
+                      Teams <i className="icofont-rounded-down"></i>
+                    </Link>
+                    <ul
+                      className={`sub-menu ${openSubMenu === 6 ? "open" : ""}`}
+                    >
+
+                      <li>
+                        <Link
+                          onClick={handleClose}
+                          className={` ${isActive("/") ? "active" : ""}`}
+                          href="/teams"
+                        >
+                          Board Of Directors
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="menu-arrow"
+                          onClick={() => toggleSubMenu1(7)}
+                          href="#"
+                        >
+                          Departments<i className="icofont-rounded-down"></i>
+                        </Link>
+                        <ul
+                          className={`sub-menu ${openSubMenu === 6 && openSubMenu1 ===7 ? "open" : ""}`}
+                        >
+                          {department?.results?.map((item) => (
+                            <li key={item.id}>
+                              <Link
+                                onClick={handleClose}
+                                className={` ${isActive(item.link) ? "active" : ""}`}
+                                href={`/teams/departments/?department=${item.id}`}
+                              >
+                                {item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </nav>

@@ -29,9 +29,11 @@ export default function TeamCard(props) {
             <Image
               src={image ? image : TeamImg1}
               alt="#"
-              width={558}
-              height={575}
+              width={1000}
+              height={1000}
+              objectFit="contain"
             />
+
           </div>
           <div className="t-bottom">
             <p>{designation ? designation : "Neurosurgeon"}</p>

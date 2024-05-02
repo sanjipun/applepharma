@@ -513,7 +513,7 @@ body {
   position: relative;
 }
 .slider .single-slider {
-  height: 800px;
+  height: 650px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -533,7 +533,7 @@ body {
   box-sizing: border-box;
 }
 .slider.index2 .single-slider .text {
-  margin-top: 300px;
+  margin-top: 185px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -552,7 +552,8 @@ body {
   
 }
 .slider .single-slider h1 span {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: white;
 }
 .slider .single-slider p span {
   color: var(--primary-color);
@@ -1788,6 +1789,7 @@ body {
 } */
 .team .t-head img {
   width: 100%;
+  max-height: 340px;
   position: relative;
 }
 .team .t-icon a {
@@ -4249,6 +4251,7 @@ body {
   align-items: center;
   font-size: 32px;
   gap:8px;
+  transition: 0.5s ease all;
 }
 .flipping-text-inner{
   display: flex;
@@ -4278,7 +4281,7 @@ body {
   height: 100%;
   display: block;
   transition: 3s ease all;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: 600;
   transition: transform 0.5s ease;
 
@@ -4288,9 +4291,7 @@ body {
 }
 
 
-.slide-up-enter-active {
-  transform: translateY(0%);
-}
+
 
 @keyframes slide-up {
   0% {
@@ -4579,6 +4580,75 @@ body {
 .job-descriptions-details ul li, .job-descriptions-details ol li{
   list-style-type: unset;
 }
+
+.teams-name-container{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 16px 32px;
+  border-radius: 8px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease all;
+  text-align: center;
+}
+.teams-name-container p{
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.teams-name-container:hover{
+  transform: scale(1);
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .dropdown-parent .dropend {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.dropdown-parent:hover .dropend {
+  display: block;
+} */
+
+.dropdown-parent {
+  position: relative;
+
+}
+
+.dropdown-parent .dropend {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s ease;
+  max-height: 0;
+  background-color: white;
+  overflow-y: scroll;
+  position: absolute;
+  left: 89%;
+  top: 0;
+  border-left: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color)
+  
+}
+
+.dropdown-parent:hover .dropend {
+  opacity: 1;
+  visibility: visible;
+  max-height: 400px;
+  
+}
+
+.dropdown-parent .dropend li {
+  
+  color: black;
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+
+.t-head{
+  max-height: 575px;
+  object-fit: cover;
+
+}
+
+
 /*=========================
 	End Footer CSS
 ===========================*/

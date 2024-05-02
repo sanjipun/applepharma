@@ -54,7 +54,7 @@ export default async function Doctors() {
 
       <section id="team" className="team section single-page">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             {BODS?.results && BODS?.results.map((teamProfile, index) => (
               <div className="col-lg-3 col-md-6 col-12" key={teamProfile.id}>
                 <TeamCard

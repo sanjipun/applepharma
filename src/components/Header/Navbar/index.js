@@ -5,16 +5,22 @@ import { usePathname } from "next/navigation";
 import { links1 } from "./productsArray";
 import { useEffect, useState } from "react";
 import { getProductsCategory } from "@/services/api/product-api";
+import { getDepartment } from "@/services/api/about-api";
 
 export default function Navbar() {
 
   const pathname = usePathname();
   const [productCateroy, setProductCateroy] = useState({});
+  const [departments, setDepartments] = useState([]);  
 
   useEffect(() => {
     getProductsCategory().then((res) => {
       setProductCateroy(res);
     });
+
+    getDepartment().then((res1) => {
+      setDepartments(res1?.results);
+    })
   }, []);
 
   function chunkArray(array, chunkSize) {
@@ -32,6 +38,50 @@ export default function Navbar() {
   }
 
   const chunks = chunkArray(productCateroy?.results, 3);
+  console.log(departments)
+
+  const departments1 = [
+    {
+      id: 1,
+      name: "Department Of Mangaer"
+    },
+    {
+      id: 2,
+      name: "Department2 of Deputy Manager"
+    },
+    {
+      id: 3,
+      name: "Department3"
+    },
+    {
+      id: 4,
+      name: "Department4"
+    },
+    {
+      id: 5,
+      name: "Department5"
+    },
+    {
+      id: 6,
+      name: "Department6"
+    },
+    {
+      id: 7,
+      name: "Department7"
+    },
+    {
+      id: 8,
+      name: "Department8"
+    },
+    {
+      id: 9,
+      name: "Department9"
+    },
+    {
+      id: 10,
+      name: "Department10"
+    },
+  ]
   return (
     <>
       <div className="main-menu">
@@ -106,7 +156,7 @@ export default function Navbar() {
                           <li className="product-navList">
                             <Link
                               className={` ${pathname === "/products-page" ? "active" : ""}`}
-                               href={`/products-page/?category=${item.id}&name=${item.name}`}
+                              href={`/products-page/?category=${item.id}&name=${item.name}`}
                             >
                               {item.name}
                             </Link>
@@ -293,6 +343,26 @@ export default function Navbar() {
                   >
                     Board OF Directors
                   </Link>
+                </li>
+                <li className="dropdown-parent">
+                  <Link
+                    className={` ${pathname === "/teams" ? "active" : ""}`}
+                    href="#"
+                  > 
+                    Department
+                  </Link>
+                  <ul className="dropend">
+                    {departments?.map((department) => (
+                      <li key={department?.id}>
+                        <Link
+                          className={` ${pathname === "/teams" ? "active" : ""}`}
+                          href={`/teams/departments/?department=${department?.id}`}
+                        >
+                          {department?.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               </ul>
             </li>
