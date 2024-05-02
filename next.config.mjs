@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+    output: 'export',
     images: {
-      domains: ['api1.aarawan.com'],
+        unoptimized: true,
+        domains: ['api1.aarawan.com'],
     },
-};
+}
 
 export default nextConfig;

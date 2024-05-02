@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 
 const Page = () => {
     const [name, setName] = useState(null);
-    const takeName= (data)=>{
+    const takeName = (data) => {
         setName(data)
     }
 
@@ -16,7 +16,7 @@ const Page = () => {
             <HeaderTwo />
             <Breadcrumbs title={name} menuText="Product Details" />
             <Suspense fallback={<Spinner animation='border' variant='primary'></Spinner>} >
-                <ProductDetails takeName={takeName}/>
+                <ProductDetails takeName={takeName} />
             </Suspense>
         </>
     )

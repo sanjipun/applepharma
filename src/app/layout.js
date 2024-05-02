@@ -1,8 +1,6 @@
 import Script from "next/script";
-import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollTop from "@/components/ScrollTop";
-import ColorLayout from "@/components/ColorPlate/ColorLayout";
 import Preloader from "@/components/Preloader";
 import { Poppins } from "next/font/google";
 
