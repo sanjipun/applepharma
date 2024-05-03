@@ -15,11 +15,7 @@ export default function MailSuccess() {
                   <i className="icofont-send-mail"></i>
                   <span>Your Mail Sent Successfully!</span>
                 </h1>
-                <p>
-                  Aenean eget sollicitudin lorem, et pretium felis. Nullam
-                  euismod diam libero, sed dapibus leo laoreet ut. Suspendisse
-                  potenti. Phasellus urna lacus
-                </p>
+                
                 <Link href="/" className="btn">
                   Go Home
                 </Link>

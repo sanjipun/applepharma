@@ -4,20 +4,11 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import HeroBg1 from "../../../../public/img/slider2.jpg";
-import HeroBg2 from "../../../../public/img/slider.jpg";
-import HeroBg3 from "../../../../public/img/slider3.jpg";
-import HeroBg4 from "../../../../public/img/heroImg1.jpg";
-import HeroBg5 from "../../../../public/img/heroImg2.jpg";
-import HeroBg6 from "../../../../public/img/heroImg3.jpg";
-import HeaderTwo from "@/components/Header/HeaderTwo";
 import HeroBgMain1 from "../../../../public/Factory/heroImageFactory.jpg";
 import HeroImage1 from "../../../../public/img/hero/hero_image_1.webp";
 import HeroImage2 from "../../../../public/img/hero/hero_image_2.webp";
 import HeroImage3 from "../../../../public/img/hero/hero_image_3.jpg";
 import HeroImage4 from "../../../../public/img/hero/hero_image_4.jpg";
-import HeroBgMain2 from "../../../../public/Factory/heroImageFactory1.jpg";
-import HeroBgMain from "../../../../public/img/heroImgMain1.jpg";
 
 import FlippingTextComponent from "@/components/BlogSidebar/flipping-text";
 export default function Sliders(props) {
