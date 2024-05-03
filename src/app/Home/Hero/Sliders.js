@@ -14,6 +14,8 @@ import HeaderTwo from "@/components/Header/HeaderTwo";
 import HeroBgMain1 from "../../../../public/Factory/heroImageFactory.jpg";
 import HeroImage1 from "../../../../public/img/hero/hero_image_1.webp";
 import HeroImage2 from "../../../../public/img/hero/hero_image_2.webp";
+import HeroImage3 from "../../../../public/img/hero/hero_image_3.jpg";
+import HeroImage4 from "../../../../public/img/hero/hero_image_4.jpg";
 import HeroBgMain2 from "../../../../public/Factory/heroImageFactory1.jpg";
 import HeroBgMain from "../../../../public/img/heroImgMain1.jpg";
 
@@ -25,11 +27,11 @@ export default function Sliders(props) {
     const [heroSliders, setheroSliders] = useState([
         {
             id: "slider1",
-            bgImg: HeroImage1,
+            bgImg: HeroImage3,
             title:
                 "Setting New Healthcare <br> Standards",
             subTitle:
-                "For Better Health",
+                "For better health, better life...",
             subAnotherTitle: "A <span> WHO-GMP </span> Certified, Medicine manufactorinf Company.",
             button: {
                 text: "About Us",
@@ -46,7 +48,7 @@ export default function Sliders(props) {
             title:
                 "Quality Medicine for <br> Improved Lives",
             subTitle:
-                "For Better Life",
+                "For better health, better life...",
             subAnotherTitle: "A <span> WHO-GMP </span> Certified, Medicine manufactorinf Company.",
             button: {
                 text: "About Us",

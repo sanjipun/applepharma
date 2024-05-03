@@ -5,6 +5,27 @@ Website: http://wpthemesgrid.com/
 Description: Mediplus - Doctor Next.js Template.
 Version:	1.1
 ========================================*/
+
+/* Bigger Screen than 1600 */
+@media only screen and (min-width:1400px) {
+    .slider .single-slider {
+        height: 670px;
+    }
+
+    .slider.index2 .single-slider .text {
+        margin-top: 250px;
+    }
+}
+/* Bigger Screen than 1200 */
+@media only screen and (min-width:1300px) and (max-width: 1399px){
+    .slider .single-slider {
+        height: 550px;
+    }
+    .slider.index2 .single-slider .text{
+        margin-top:170px;
+    }
+}
+
 /* iPad Screen */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header .nav li a {
@@ -143,9 +164,9 @@ Version:	1.1
   .header.style2 .right-bar {
     padding-top: 15px;
   }
-  .slider .single-slider {
+  /* .slider .single-slider {
     height: 550px;
-  }
+  } */
   .schedule {
     background: #fff;
     margin: 0;
