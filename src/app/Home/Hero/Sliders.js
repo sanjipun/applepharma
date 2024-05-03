@@ -12,6 +12,8 @@ import HeroBg5 from "../../../../public/img/heroImg2.jpg";
 import HeroBg6 from "../../../../public/img/heroImg3.jpg";
 import HeaderTwo from "@/components/Header/HeaderTwo";
 import HeroBgMain1 from "../../../../public/Factory/heroImageFactory.jpg";
+import HeroImage1 from "../../../../public/img/hero/hero_image_1.jpg";
+import HeroImage2 from "../../../../public/img/hero/hero_image_2.jpg";
 import HeroBgMain2 from "../../../../public/Factory/heroImageFactory1.jpg";
 import HeroBgMain from "../../../../public/img/heroImgMain1.jpg";
 
@@ -23,11 +25,11 @@ export default function Sliders(props) {
     const [heroSliders, setheroSliders] = useState([
         {
             id: "slider1",
-            bgImg: HeroBgMain1,
+            bgImg: HeroImage1,
             title:
-                "Setting New <span>Healthcare</span> Standards: Quality <span>Medicine</span> for Improved <span>Lives.</span>",
+                "Setting New Healthcare <br> Standards",
             subTitle:
-                "For Better ",
+                "For Better Health",
             subAnotherTitle: "A <span> WHO-GMP </span> Certified, Medicine manufactorinf Company.",
             button: {
                 text: "About Us",
@@ -38,6 +40,23 @@ export default function Sliders(props) {
                 link: "/contact",
             },
         },
+        {
+            id: "slider2",
+            bgImg: HeroImage2,
+            title:
+                "Quality Medicine for <br> Improved Lives",
+            subTitle:
+                "For Better Life",
+            subAnotherTitle: "A <span> WHO-GMP </span> Certified, Medicine manufactorinf Company.",
+            button: {
+                text: "About Us",
+                link: "/about",
+            },
+            button2: {
+                text: "Contact Us",
+                link: "/contact",
+            },
+        }
         // {
         //   id: "slider2",
         //   bgImg: HeroBg5,
@@ -78,7 +97,7 @@ export default function Sliders(props) {
             {/* <!-- Slider Area --> */}
             <section className={sectionName ? sectionName : "slider"} >
                 <Swiper
-                    autoplay={{ delay: 4000 }}
+                    autoplay={{ delay: 5000 }}
                     modules={[Navigation, Autoplay]}
                     navigation={{
                         nextEl: ".swiper-button-next",
@@ -95,7 +114,7 @@ export default function Sliders(props) {
                             }}
                             key={singleSlider.id}
                         >
-                            <div className="blue-layer"></div>
+                            {/* <div className="blue-layer"></div> */}
                             <div className="container" style={{ zIndex: '1066', position: 'relative' }}>
                                 <div className="row hero-row">
                                     <div className="col-12">
@@ -113,7 +132,7 @@ export default function Sliders(props) {
                                                         }}
                                                         style={{ marginTop: "0px" }}
                                                     ></p>
-                                                    <FlippingTextComponent texts={text} intervalTime={2500} />
+                                                    {/* <FlippingTextComponent texts={text} intervalTime={2500} /> */}
                                                     {/* <div className="flipping-text-inner">
                           <span>Health</span>
                           <span>Life</span>
