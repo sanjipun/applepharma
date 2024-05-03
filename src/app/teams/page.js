@@ -19,28 +19,28 @@ export default async function Doctors() {
     {
       tilt: "tilt-disable",
       image: TeamImg5,
-      name: "Krtian Awal",
+      name: "Ktian Awal",
       designation: "Managing Director"
 
     },
     {
       tilt: "tilt-disable",
       image: TeamImg5,
-      name: "Krtian Awal1",
+      name: "Ktian Awal1",
       designation: "Managing Director"
 
     },
     {
       tilt: "tilt-disable",
       image: TeamImg5,
-      name: "Krtian Awal2",
+      name: "Ktian Awal2",
       designation: "Managing Director"
 
     },
     {
       tilt: "tilt-disable",
       image: TeamImg5,
-      name: "Krtian Awal3",
+      name: "Ktian Awal3",
       designation: "Managing Director"
 
     },

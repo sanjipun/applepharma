@@ -25,7 +25,7 @@ export default function TeamCard(props) {
     <>
       <Tilt options={defaultOptions} className={tilt ? tilt : ""}>
         <div className="single-team">
-          <div className="t-head">
+            <div className="t-head single-image">
             <Image
               src={image ? image : TeamImg1}
               alt="#"
@@ -38,9 +38,9 @@ export default function TeamCard(props) {
           <div className="t-bottom">
             <p>{designation ? designation : "Neurosurgeon"}</p>
             <h2>
-              <Link href="#">
+              <h5>
                 {name ? name : "Collis Molate"}
-              </Link>
+              </h5>
             </h2>
           </div>
         </div>

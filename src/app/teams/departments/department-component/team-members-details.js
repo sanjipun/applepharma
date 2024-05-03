@@ -41,7 +41,7 @@ const TeamMemberDetails = () => {
                     <div className='col-12 align-content-center '>
                         <div className='row justify-content-center '>
                             {teamMembers?.filter(team => team?.is_team_leader).map((team, index) => (
-                                <div className='col-lg-6 col-sm-6 col-12 ' key={index}>
+                                <div className='col-lg-3 col-sm-6 col-12 ' key={index}>
                                     <TeamCard
                                         name={team?.name}
                                         designation={team?.designation}
