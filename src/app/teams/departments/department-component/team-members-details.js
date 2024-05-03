@@ -53,15 +53,16 @@ const TeamMemberDetails = () => {
                         </div>
                     </div>
                     <div className='col-12'>
-                        <div className='row gap-3 justify-content-center '>
+                        <div className='row justify-content-center'>
                             {teamMembers?.filter(team => !team?.is_team_leader).map((teamName, index) => (
-                                <div className='col-lg-2 col-md-4 col-sm-6 teams-name-container' key={index}>
-                                    <p>{teamName?.name}</p>
+                                <div className='col-lg-3 col-md-4 col-sm-6' key={index}>
+                                <div className='teams-name-container' key={index}>
+                                    <small>{teamName?.designation}</small>
+                                    <h6>{teamName?.name}</h6>
+                                </div>
                                 </div>
                             ))}
-
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ export default function WhyChoose(props) {
           <div className="row">
             <div className="col-lg-12">
               <SectionHead
-                title="A WHO-GMP Certified Pharceuticals Company"
+                title="A WHO-GMP Certified Pharceutical Company"
               />
             </div>
           </div>
@@ -36,12 +36,12 @@ export default function WhyChoose(props) {
                 <h3>Who We Are</h3>
 
                 <p>
-                  <span style={{ fontSize: "20px", fontWeight: '600' }}>Vision</span><br />
-                  {data?.vision}
-                </p>
-                <p>
                   <span style={{ fontSize: "20px", fontWeight: '600' }}>Mission</span><br />
                   {data?.mission}
+                </p>
+                <p>
+                  <span style={{ fontSize: "20px", fontWeight: '600' }}>Vision</span><br />
+                  {data?.vision}
                 </p>
                 <div className="row">
                   <span style={{ fontSize: "19px", fontWeight: '600', marginBottom: "10px" }}>Our Values</span>

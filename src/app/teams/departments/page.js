@@ -10,7 +10,7 @@ const Page = () => {
     return (
         <div>
             <HeaderTwo />
-            <Breadcrumbs title="Board Of Directors" menuText="Teams" />
+            <Breadcrumbs title="Team Members" menuText="Teams" />
             <Suspense fallback={<Preloader />}>
                 <TeamMemberDetails />
             </Suspense>

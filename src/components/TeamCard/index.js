@@ -36,12 +36,10 @@ export default function TeamCard(props) {
 
           </div>
           <div className="t-bottom">
-            <p>{designation ? designation : "Neurosurgeon"}</p>
-            <h2>
+            <small>{designation ? designation : "Manager"}</small>
               <h5>
-                {name ? name : "Collis Molate"}
+                {name ? name : "Apple Int'l Pharma"}
               </h5>
-            </h2>
           </div>
         </div>
       </Tilt>
