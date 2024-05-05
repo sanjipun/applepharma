@@ -1428,19 +1428,23 @@ object {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .mobile-menu-offcanvas-toggler {
-    display: none;
+    display: block;
   }
   .mobile-menu-modal .offcanvas-dialog {
     width: 400px;
   }
-  .mobile-menu-offcanvas-toggler {
-    top: 6%;
-  }
+
   .header-area.is-sticky .mobile-menu-offcanvas-toggler {
     top: 26px;
   }
   .header .navbar {
     display: none;
+  }
+  .header .mobile-menu-sticky {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
   }
 }
 @media only screen and (max-width: 767px) {

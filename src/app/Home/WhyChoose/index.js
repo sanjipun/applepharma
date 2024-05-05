@@ -26,7 +26,7 @@ export default function WhyChoose(props) {
           <div className="row">
             <div className="col-lg-12">
               <SectionHead
-                title="A WHO-GMP Certified Pharceutical Company"
+                title="A WHO-GMP Certified Pharmaceutical Industry"
               />
             </div>
           </div>

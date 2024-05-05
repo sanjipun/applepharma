@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Image1 from '../../../public/img/medicineImg.jpg';
 
 const ProductDetails = (props) => {
-    const { takeName} = props;
+    const { takeName } = props;
     const [productDetails, setProductDetails] = React.useState(null);
     const [products, setProducts] = React.useState({});
     const [selectedTab, setSelectedTab] = React.useState(1);
@@ -23,7 +23,7 @@ const ProductDetails = (props) => {
             setProducts(data)
         }
         );
-        if(productId){
+        if (productId) {
             getProductDetailsWithId(productId).then((data) => {
                 setProductDetails(data);
                 takeName(name);
@@ -57,7 +57,7 @@ const ProductDetails = (props) => {
     const productsDes = [
         {
             id: 1,
-            desc:productDetails?.indications ? productDetails?.indications : "Prefer Doctors Consultation Before Use."
+            desc: productDetails?.indications ? productDetails?.indications : "Prefer Doctors Consultation Before Use."
         },
         {
             id: 2,
@@ -80,7 +80,7 @@ const ProductDetails = (props) => {
 
                     <div className="news-head new-head-extra single-image">
                         {/* <img src={productDetails?.photo} alt="#" /> */}
-                        <Image 
+                        <Image
                             height={1000}
                             width={1000}
                             src={productDetails?.photo ? productDetails?.photo : Image1}
@@ -92,7 +92,7 @@ const ProductDetails = (props) => {
                             {productHead.map((product, index) => (
                                 <li key={product.id} className="nav-item" role="presentation">
                                     <button
-                                        className={`nav-link ${selectedTab === product.id ? 'active' : null }` }
+                                        className={`nav-link ${selectedTab === product.id ? 'active' : null}`}
                                         onClick={() => handleButtonClick(product.id)}
                                         id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
                                     >
@@ -118,8 +118,8 @@ const ProductDetails = (props) => {
 
                 </div>
             </div>
-            <Testimonial products={products}  />
-            
+            <Testimonial products={products} />
+
         </div>
     )
 }

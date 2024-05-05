@@ -31,11 +31,9 @@ Version:	1.1
   .header .nav li a {
     padding: 0;
     padding: 25px 5px !important;
-    font-size: 13px;
   }
   .header .nav li .dropdown li a {
     padding: 10px 15px !important;
-    font-size: 13px;
   }
   .imageGallary{
     padding: 90px;
@@ -107,7 +105,6 @@ Version:	1.1
     margin: 0;
   }
   .header .nav li a {
-    font-size: 13px;
     font-weight: 500;
     padding: 20px 4px;
   }
@@ -117,7 +114,6 @@ Version:	1.1
   }
   .header .nav li .dropdown li a {
     padding: 10px 15px;
-    font-size: 13px;
   }
   .header .search-form {
     top: 64px;
@@ -195,9 +191,9 @@ Version:	1.1
     opacity: 0.5;
   } */
   .slider .single-slider h1 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 52px;
   }
   .slider .single-slider .text {
     margin-top: 80px;
@@ -464,6 +460,18 @@ Version:	1.1
 }
 }
 
+@media only screen and (max-width: 992px) {
+
+    .header.style2 .header-inner {
+            display: none;
+        }
+  .header .middle-header {
+      display: flex;
+      padding: 0;
+  }
+
+}
+
 
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
@@ -490,10 +498,7 @@ Version:	1.1
     margin: 0;
   }
 
-  .header .middle-header {
-    display: flex;
-    padding: 0;
-  }
+
   .header .header-inner {
     width: 100%;
     z-index: 333;
@@ -613,9 +618,7 @@ Version:	1.1
   .header.style2 .slicknav_nav {
     margin-top: 60px;
   }
-  .header.style2 .header-inner {
-    display: none;
-  }
+
   .header.style2 .main-menu {
     display: none;
   }
@@ -707,9 +710,9 @@ Version:	1.1
     opacity: 0.5;
   } */
   .slider .single-slider h1 {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 600;
-    line-height: 35px;
+    line-height: 42px;
   }
   .slider .single-slider .text {
     margin-top: 80px;
@@ -1184,8 +1187,8 @@ Version:	1.1
     padding: 50px 0px;
   }
   .flipping-inner{
-    font-size: 26px;
-    margin-left: 54px;
+    font-size: 30px;
+    line-height: 32px;
   }
   .section-title {
     margin-bottom: 30px;
@@ -1243,9 +1246,9 @@ Version:	1.1
     opacity: 0.5;
   } */
   .slider .single-slider h1 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 25px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 32px;
   }
 
   /* .slider .single-slider p {

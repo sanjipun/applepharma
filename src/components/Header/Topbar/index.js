@@ -9,13 +9,13 @@ export default function Topbar() {
             <div className="col-lg-6 col-md-5 col-12">
               <ul className="top-link">
                 <li>
-                  <Link href="/about"><i className="icofont-facebook"></i></Link>
+                    <Link href="https://www.facebook.com/profile.php?id=100069103209390"><i className="icofont-facebook"></i></Link>
                 </li>
                 <li>
-                  <Link href="/doctors"><i className="icofont-instagram"></i></Link>
+                    <Link href="https://www.instagram.com/apple.pharma?igsh=MWFlYmVua3IxdDhpNA=="><i className="icofont-instagram"></i></Link>
                 </li>
                 <li>
-                  <Link href="/contact"><i className="icofont-linkedin"></i></Link>
+                    <Link href="https://www.linkedin.com/in/apple-international-pharmaceuticals-938b31215/?originalSubdomain=np"><i className="icofont-linkedin"></i></Link>
                 </li>
               </ul>
             </div>

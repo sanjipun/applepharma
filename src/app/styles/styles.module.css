@@ -241,7 +241,7 @@ body {
 }
 .header .nav li a {
   color: #2c2d3f;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
   padding: 25px 12px;
@@ -283,7 +283,7 @@ body {
 .header .nav li a i {
   display: inline-block;
   margin-left: 1px;
-  font-size: 13px;
+  font-size: 16px;
 }
 /* Middle Header */
 .header.style2 .header-inner {
