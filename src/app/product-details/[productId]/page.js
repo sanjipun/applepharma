@@ -12,7 +12,7 @@ const Page = async ({ params }) => {
   return (
     <>
       <HeaderTwo />
-      <Breadcrumbs title={data.name} menuText="Product Details" />
+      <Breadcrumbs title={data?.name} menuText="Product Details" />
       <ProductDetails productDetails={data} />
     </>
   );

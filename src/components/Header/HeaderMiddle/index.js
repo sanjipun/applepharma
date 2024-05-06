@@ -12,7 +12,6 @@ export default function HeaderMiddle() {
               <Logo />
               <MobileOffcanvas />
             </div>
-            
           </div>
         </div>
       </div>

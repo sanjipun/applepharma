@@ -10,7 +10,7 @@ export default function Breadcrumbs(props) {
           <div className="bread-inner">
             <div className="row">
               <div className="col-12">
-                <h2>{title ? title : "hello"}</h2>
+                <h2>{title}</h2>
                 <ul className="bread-list">
                   <li>
                     <Link href="/">Home</Link>
@@ -18,7 +18,7 @@ export default function Breadcrumbs(props) {
                   <li>
                     <i className="icofont-simple-right"></i>
                   </li>
-                  <li className="active">{menuText ? menuText : "Doctors"}</li>
+                  <li className="active">{menuText}</li>
                 </ul>
               </div>
             </div>

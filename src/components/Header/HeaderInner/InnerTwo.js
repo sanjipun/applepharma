@@ -1,11 +1,9 @@
 "use client";
 
 import useStickyHeader from "./useStickyHeader";
-
 import Navbar from "../Navbar";
 import SearchBar from "../SearchBar";
 import Logo from "../Logo";
-import MobileOffcanvas from "@/components/MobileOffcanvas";
 
 export default function HeaderInner2() {
   const { isSticky } = useStickyHeader();

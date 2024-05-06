@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import BlogImg4 from "../../../public/img/medicineImg2.png";
 
 export default function ProductCard(props) {
   const { productsDetails } = props;
-  // console.log(props, "producct details");
 
   return (
     <>
@@ -12,7 +10,7 @@ export default function ProductCard(props) {
         <div className="news-head-product-homepage single-image">
           <Link href={`/product-details/${productsDetails?.id}`}>
             <Image
-              src={productsDetails?.photo ? productsDetails?.photo : BlogImg4}
+              src={productsDetails?.photo}
               alt="#"
               width={1000}
               height={1000}
@@ -23,9 +21,7 @@ export default function ProductCard(props) {
           <div className="new-content-extra">
             <h2 className="productImg-text">
               <Link href={`/product-details/${productsDetails?.id}`}>
-                {productsDetails?.name
-                  ? productsDetails?.name
-                  : "Medicine Name"}
+                {productsDetails?.name}
               </Link>
             </h2>
           </div>
