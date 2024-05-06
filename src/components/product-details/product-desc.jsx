@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export const ProductDesc = (props) => {
+const ProductDesc = (props) => {
   const { productDetails } = props;
   const [selectedTab, setSelectedTab] = React.useState(1);
 
@@ -106,3 +106,5 @@ export const ProductDesc = (props) => {
     </div>
   );
 };
+
+export default ProductDesc;
